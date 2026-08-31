@@ -46,12 +46,18 @@ public class Transfer {
                     JOptionPane.showMessageDialog(frame, "Transfer successful!");
                     frame.dispose();
                     new UserDash(currentUser);
-                } else {
-                    JOptionPane.showMessageDialog(frame, result);
-                    recipientTextField.setText("");
-                    amountTextField.setText("");
+                }  else {
+                String message = switch (result) {
+                    case RECEIVER_NOT_FOUND -> "Recipient mobile number not found.";
+                    case INSUFFICIENT_BALANCE -> "Insufficient balance.";
+                    case INVALID_AMOUNT -> "Please enter a valid positive amount.";
+                    case ERROR -> "Something went wrong. Please try again.";
+                    default -> "Transfer failed.";
+                };
+                JOptionPane.showMessageDialog(frame, message);
+                recipientTextField.setText("");
+                amountTextField.setText("");
                 }
-
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(frame, "Please enter a valid amount.");
                 amountTextField.setText("");
