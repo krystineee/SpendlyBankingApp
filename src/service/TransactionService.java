@@ -47,7 +47,6 @@ public class TransactionService {
         return history;
     }
 
-
     // Cash in
     public boolean cashIn(User user, double amount) {
 
@@ -105,7 +104,6 @@ public class TransactionService {
                 stmt2.executeUpdate();
             }
 
-            // Save changes
             conn.commit();
 
             // Update current
@@ -290,12 +288,8 @@ public class TransactionService {
                 stmt.executeUpdate();
             }
 
-
-            // Save database changes
             conn.commit();
 
-
-            // Update sender's Java object
             sender.setBalance(
                     sender.getBalance() - amount
             );

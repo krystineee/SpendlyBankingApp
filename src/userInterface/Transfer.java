@@ -58,7 +58,6 @@ public class Transfer {
             }
         });
 
-
         cancelButton.addActionListener(e -> {
             recipientTextField.setText("");
             amountTextField.setText("");

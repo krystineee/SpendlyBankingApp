@@ -47,7 +47,6 @@ public class UserService {
         }
     }
 
-
     public boolean mobileExists(String mobileNumber) {
 
         String sql =
@@ -67,7 +66,6 @@ public class UserService {
             return false;
         }
     }
-
 
     //register new user
     public User register(
