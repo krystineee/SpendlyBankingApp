@@ -48,7 +48,7 @@ FLUSH PRIVILEGES;
 ### Running the App
 The database password reads from an environment variable.
 
-1. In IntelliJ: Run → Edit Configurations → "Main" → Environment variables, add: ```   SPENDLY_DB_PASSWORD=your_chosen_password ```
+1. In IntelliJ: Run → Edit Configurations → "Main" → Environment variables, add: ```SPENDLY_DB_PASSWORD=your_chosen_password ```
 2. Add the MySQL Connector/J library (Project Structure → Libraries → From Maven → ```mysql:mysql-connector-java:8.0.33```)
 
 3. Run Main.java
